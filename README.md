@@ -1,5 +1,5 @@
 # The-really-extremely-dumb-bot
-very dumb, written in lua using the discordia library
+very dumb, written in luvit (lua but on coke) using the discordia library
  ## how 2 install
  - go to https://github.com/SinisterRectus/Discordia
  - everything is there so don't @ me
