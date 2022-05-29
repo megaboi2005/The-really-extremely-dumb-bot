@@ -7,7 +7,7 @@ very dumb, written in luvit (lua but on coke) using the discordia library
 ## suggestions
 - put them in issues I guess
 - make a fork and pull request 
-- maybe I'll except 
+- maybe I'll accept 
 
 ## this bot is so bad lmao
 - ok, didn't ask also I didn't need that information also + bozo + no fatherly figure + you use twitter daily + you can't possibly do better than me + you have no friends.
