@@ -1,8 +1,8 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local inputs = {
+"pona",
 "tred",
-"yedit",
 "wow",
 "how are you",
 "gm",
@@ -23,11 +23,15 @@ local inputs = {
 "poopoo",
 "sever",
 "node.js",
-"javascript"
+"javascript",
+"hi",
+"based",
+"goodbye",
+"bye"
 }
 local outcomes = {
 "me.",
-"907740337705984010",
+"based",
 "agreed.",
 "I am feeling pretty good, how about you?",
 "Good morning xpingx.",
@@ -48,7 +52,11 @@ local outcomes = {
 "pp",
 "I PeeD My Self",
 "bad.js",
-"true == \"true\" // -> false;"
+"true == \"true\" // -> false;",
+"Hi xpingx",
+"Based?? Based on what?!?!?!",
+"Goodbye ily",
+"Goodbye queen"
 }
 function split(s, delimiter)
     result = {};
@@ -56,6 +64,14 @@ function split(s, delimiter)
         table.insert(result, match);
     end
     return result;
+end
+
+function wordfind(sentence,word)
+	list = split(sentence," ")
+	for i = 0, #list do
+		if list[i] == word then return true; end
+	end
+	return false
 end
 usermsgcount = {}
 
@@ -91,14 +107,19 @@ client:on('messageCreate', function(message)
 			message.channel:send(string.reverse(message.content:lower():sub(16)))
 
 		elseif splitmsg[2] == "shake" then
+
 			if splitmsg[3] == "8ball" then
 				balloutcomes = {"As I see it, yes.", "Ask again later.", "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again.", "Don’t count on it.", "It is certain.", "It is decidedly so.", "Most likely.", "My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good.", "Reply hazy, try again.","Signs point to yes.", "Very doubtful.", "Without a doubt.", "Yes.", "Yes – definitely.", "You may rely on it."}
 				message.channel:send(balloutcomes[math.random(1,#balloutcomes)])
-			elseif splitmsg[3] == "dice" then				
-				if tonumber(splitmsg[4]) == nil then message.channel:send("not a valid number"); return; end 
-				message.channel:send(math.random(1,tonumber(splitmsg[4])))
+
+			elseif splitmsg[3] == "dice" then
+				print(tonumber(splitmsg[4]))
+				if tonumber(splitmsg[4]) < 0 then message.channel:send("no negative numbers"); return; elseif tonumber(splitmsg[4]) == nil then message.channel:send("not a valid number"); return; end
+				message.channel:send(tostring(math.random(1,tonumber(splitmsg[4]))))
 			end
+
 		elseif splitmsg[2] == "help" then file = io.open("help.txt", "r"):read("*a"); message.channel:send(file);
+
 		elseif splitmsg[2] == "give" then
 				if splitmsg[3] == "msgcount" then 
 					message.channel:send(usermsgcount[message.author.tag]) 
@@ -117,8 +138,8 @@ client:on('messageCreate', function(message)
         end
         return
     end
-    for a = 1 , #inputs do
-        if string.find(message.content:lower(),inputs[a]) then
+    for a = 1 , #inputs do 
+        if wordfind(message.content:lower(),inputs[a]) then
 			cutmessage = message.content:lower():gsub(inputs[a], "")
             finalmessage = outcomes[a]:gsub("xnamex", cutmessage):gsub("xpingx", message.author.name):gsub("@","(at)")
             message.channel:send(finalmessage)
@@ -131,4 +152,3 @@ end)
 
 
 client:run("Bot (token)");
-
