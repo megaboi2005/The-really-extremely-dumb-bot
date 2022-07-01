@@ -4,6 +4,13 @@ very dumb, written in luvit (lua but on coke) using the discordia library
  - go to https://github.com/SinisterRectus/Discordia
  - everything is there so don't @ me
 
+## features
+- read messages
+- react to messages with words with words
+- commands that will satisfy you more than your gf in bed
+- better than yeti bot (legit just a bunch of lazy if statements + this bot is opensource)
+- not bloat
+
 ## suggestions
 - put them in issues I guess
 - make a fork and pull request 
