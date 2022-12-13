@@ -4,6 +4,7 @@ rewritten lua bot in go using the discordgo library
  - in the terminal while also in the folder of main.go, type go mod init (insert any name u wish)
  - go to https://github.com/bwmarrin/discordgo for instructions on how to install the library
  - don't question me if it errors bc you are probably most likely doing it wrong
+ - line 46 is where the token needs to be manually typed, I might make a config soon but idk because this is mostly for fun 
 
 ## features
 - read messages
