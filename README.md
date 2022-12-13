@@ -1,5 +1,5 @@
 # The-really-extremely-dumb-bot
-rewritten lua bot in go using the discordgo library
+I rewrote my lua bot in go using the discordgo library
  ## how 2 install
  - in the terminal while also in the folder of main.go, type go mod init (insert any name u wish)
  - go to https://github.com/bwmarrin/discordgo for instructions on how to install the library
