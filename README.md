@@ -1,20 +1,21 @@
 # The-really-extremely-dumb-bot
-very dumb, written in luvit (lua but on coke) using the discordia library
+rewritten lua bot in go using the discordgo library
  ## how 2 install
- - go to https://github.com/SinisterRectus/Discordia
- - everything is there so don't @ me
+ - in the terminal while also in the folder of main.go, type go mod init (insert any name u wish)
+ - go to https://github.com/bwmarrin/discordgo for instructions on how to install the library
+ - don't question me if it errors bc you are probably most likely doing it wrong
 
 ## features
 - read messages
 - react to messages with words with words
-- commands that will satisfy you more than your gf in bed
-- better than yeti bot (legit just a bunch of lazy if statements + this bot is opensource)
-- not bloat
+- commands that will satisfy you more than your gf in bed (or bf)
+- better than yeti bot and dirty bot (legit just a bunch of lazy if statements + this bot is opensource + is written in go)
+- not bloat because it is written in go
 
 ## suggestions
 - put them in issues I guess
-- make a fork and pull request 
-- maybe I'll accept 
+- don't fork and make a pull request because I won't accept
+
 
 ## this bot is so bad lmao
-- ok, didn't ask also I didn't need that information also + bozo + no fatherly figure + you use twitter daily + you can't possibly do better than me + you have no friends.
+- lol okay shut up
